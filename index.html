@@ -18,7 +18,7 @@
             <p>
                 <label>Password:</label>
                 <input id="password" type="password" class="password">
-                <i class="bi bi-eye-slash" id="toggle-password"></i>
+                <i class="bi-eye-slash" id="toggle-password"></i>
             </p>
             <button type="submit">Log In</button>
         </form>
@@ -38,6 +38,9 @@
 
             // set the fresh attribute value...
             password.setAttribute("type", type);
+
+            // toggle the class
+            togglePassword.classList.toggle('bi-eye')
 
         });
 
