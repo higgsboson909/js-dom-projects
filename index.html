@@ -16,10 +16,36 @@
             <p>
                 <label>Password:</label>
                 <input id="password" type="password" class="password">
-                <i class="bi bi-eye-slash" id="toggle-password"></i>
+                <i class="bi bi-eye-slash" id="toggle-password">click me</i>
             </p>
             <button type="submit">Log In</button>
         </form>
     </div>
+
+    <script>
+        
+        // refer the elements form html
+        const togglePassword = document.querySelector("#toggle-password");
+        const password = document.querySelector("#password");
+
+        // onclick functionality
+        togglePassword.addEventListener('click', function (){
+            
+            // get the changed attribute value on click & save to type
+            let type = password.getAttribute("type") === "password" ? "text" : "password";
+
+            // set the fresh attribute value...
+            password.setAttribute("type", type);
+
+        });
+
+        // refer the form element form html
+        const form = document.querySelector("form");
+        // onclick prevent the default behavior of submit attribute
+        form.addEventListener('submit', function (e){
+            e.preventDefault();
+        });
+
+</script>
 </body>
 </html>
